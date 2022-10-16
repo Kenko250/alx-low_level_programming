@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main -Programming is like building a multilingual puzzle
+ * mian - Prints out a string to stdout.
  *
- * Return -  Always  return 0
+ * Return: 0 if success.
  */
 
 
