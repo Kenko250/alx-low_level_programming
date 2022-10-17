@@ -14,11 +14,11 @@ int main(void)
 	long long int d;
 	float e;
 
-	printf("size of int: %lu\n", sizeof(a));
-	printf("size of char: %lu\n", sizeof(b));
-	printf("size of long int: %lu\n", sizeof(c));
-	printf("size of long long int: %lu\n", sizeof(d));
-	printf("size of float: %lu\n", sizeof(a));
+	printf("size of int: %d\n", sizeof(a));
+	printf("size of char: %d\n", sizeof(b));
+	printf("size of long int: %d\n", sizeof(c));
+	printf("size of long long int: %d\n", sizeof(d));
+	printf("size of float: %d\n", sizeof(a));
 
 	return (0);
 
