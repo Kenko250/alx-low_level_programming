@@ -7,7 +7,6 @@
  * Description- program to assign a random number to variable"n"
  * Return: Always return 0
  */
-
 int main(void)
 {
 	int n;
@@ -26,7 +25,7 @@ int main(void)
 	}
 	else
 	{
-		printf("%d is %d and is less than 6 and not 0\n", n, last_num_of_n);
+		printf ("%d is %d and is less than 6 and not 0\n", n, last_num_of_n);
 	}
 	return (0);
 }
