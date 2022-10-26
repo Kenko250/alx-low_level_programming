@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- *main - reset_to_98
- * @n: - pointer to print
+ *main - Entry point
+ *Description - function that takes a pointer to an int
+ *@n: - pointer to print
  */
 
 void reset_to_98(int *n)
