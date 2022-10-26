@@ -1,9 +1,6 @@
-void swap_int(int *a, int *b);
-1. int _strlen(char *s);
-2. void _puts(char *str);
-3. void print_rev(char *s);
-4. void rev_string(char *s);
-5. void puts2(char *str);
-6. void puts_half(char *str);
-7. void print_array(int *a, int n);
-8. char *_strcpy(char *dest, char *src);
+0x05.c - Pointers, arrays and strings
+
+0. Write a function that takes a pointer to an int as parameter and updates the value it points to to 98.
+1. Write a function that swaps the values of two integers.
+2. Write a function that returns the length of a string.
+3. Write a function that prints a string, followed by a new line, to stdout.
