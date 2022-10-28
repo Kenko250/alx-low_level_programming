@@ -15,7 +15,7 @@ int main(void)
 
 	for (num = 48; num <= 57; num++)
 	{
-		if(num == 44)
+		if (num == 44)
 		{
 			break;
 		}
