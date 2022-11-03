@@ -3,8 +3,8 @@
 /**
  * _strspn - gets the length of a prefix substring
  * @s: pointer to string to be scanned
- *  @accept: string that list of characters to match in s
- *   Return: Return length of a prefix substring
+ * @accept: string that list of characters to match in s
+ * Return: Return length of a prefix substring
  */
 unsigned int _strspn(char *s, char *accept)
 {
