@@ -1,31 +1,29 @@
 #include "main.h"
 #include <stddef.h>
 /**
- *  _strpbrk - searches a string for any of a set of bybtes
- *  @s: ponter to sources string
- * @accept: pointer to substring
- *  Return: returns a pointer to the bytes in s that matches
- *   one of the bytes in accpet
+ *  _strpbrk - Entry point
+ *  @s: input
+ *  @accept: input
+ *   Return: Always 0 (Success)
  */
 
 char *_strpbrk(char *s, char *accept)
 {
-	int counter, i;
+	int i;
 
-	counter = 0;
-	while (*(s + counter))
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		for (i = 0; *(accept + i) != '\0'; i++)
+		int i, n;
+
+		for (i = 0; s[i] != '\0'; i++)
 		{
-			if (*(accept + i) == *(s + counter))
+			for (n = 0; accept[n] != '\0'; n++)
 			{
-			if (*(accept + i) == *(s + counter))
-				{
-					return ((s + counter));
-				}
+				if (s[i] == accept[n])
+					return (s + i);
 			}
-			counter++;
 		}
+
 	}
 		return (NULL);
 }
