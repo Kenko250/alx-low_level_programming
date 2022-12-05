@@ -1,38 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "main.h"
-
 /**
- * create_file - creates a file
- * @filename: filename.
- * @text_content: content writed in the file.
+ * read_textfile - function reads a text file and prints it to standard output
+ * @filename: file
+ * @letters: number of letters to read and print
  *
- * Return: 1 if it success. -1 if it fails.
+ * Return: number of letters read and printed, 0 if fail
  */
-	int create_file(const char *filename, char *text_content)
+ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int fd;
-	int nletters;
-	int rwr;
+	int fd, n_read, n_write;
+	char *s;
 
-	if (!filename)
-		return (-1);
-
-	fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
-
+	if (filename == NULL)
+		return (0);
+	s = malloc(letters * sizeof(char) + 1);
+	if (!s)
+		return (0);
+	fd = open(filename, O_RDONLY);
 	if (fd == -1)
-		return (-1);
-
-	if (!text_content)
-		text_content = "";
-
-	for (nletters = 0; text_content[nletters]; nletters++)
-		;
-
-	rwr = write(fd, text_content, nletters);
-
-	if (rwr == -1)
-		return (-1);
-
+	{
+		free(s);
+		return (0);
+	}
+	n_read = read(fd, s, letters);
+	if (n_read == -1)
+	{
+		free(s);
+		return (0);
+	}
+	n_write = write(STDOUT_FILENO, s, n_read);
 	close(fd);
-
-	return (1);
+	free(s);
+	if (n_read == n_write)
+		return (n_write);
+	return (0);
 }
